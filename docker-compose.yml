@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  fastapi:
+    build: .
+    ports:
+      - "5050:5050"
+    volumes:
+      - .:/app 
+    environment:
+      - PYTHONUNBUFFERED=1 
