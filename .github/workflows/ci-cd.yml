@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout 
+      - uses: actions/checkout@v3
       - run: docker compose build web_houses_api
       - run: docker tag web_houses_api lorislin/web_houses_api:latest
       - run: docker login -u "lorisl" -p "${{ secrets.LOGIN_SECRET }}"
