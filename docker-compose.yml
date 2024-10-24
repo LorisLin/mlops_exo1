@@ -1,11 +1,7 @@
 version: '3.9'
 
 services:
-  fastapi:
-    build: .
+  web_houses_api:
+    image: lorislin/web_houses_api:latest
     ports:
       - "5050:5050"
-    volumes:
-      - .:/app 
-    environment:
-      - PYTHONUNBUFFERED=1 
