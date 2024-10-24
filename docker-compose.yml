@@ -2,6 +2,6 @@ version: '3.9'
 
 services:
   web_houses_api:
-    image: lorislin/web_houses_api:latest
+    image: lorisl/web_houses_api:latest
     ports:
       - "5050:5050"
