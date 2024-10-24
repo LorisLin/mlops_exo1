@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker compose build lorislin/web_houses_api
-      - run: docker tag lorislin/web_houses_api lorislin/web_houses_api
+      - run: docker tag lorislin/web_houses_api web_houses_api
       - run: docker login -u "lorisl" -p "${{ secrets.LOGIN_SECRET }}"
       - run: docker push lorislin/web_houses_api:latest
       - run: ssh ubuntu@20.86.55.5 "docker compose pull lorislin/web_houses_api:latest"
